@@ -10,19 +10,27 @@ int main() {
     int key;
     
     printf("Please enter message to be encrypted (in capital letters): ");
-    scanf("%c", plainText);
+    scanf("%s", plainText);
     
     printf("Please enter value for key: ");
-    scanf("%d", key);
+    scanf("%d", &key);
     
-    printf("The message to be encrypted is: %c", plainText);
+         
+         rotationCipher(plainText, key);
     
-    rotationCipher(plainText, key);
     
-    printf("The encrypted message is: %d", plainText);
+    printf("The encrypted message is: %s", plainText);
     
 return 0;
 }
 
 void rotationCipher(char rotationCipher[], int n)
+{
+    int i;
+    
+    for(i=0; i<rotationCipher[i]; i++)
+    {
+        rotationCipher[i] = rotationCipher[i] + n;
+    }
+}
 
